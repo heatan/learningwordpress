@@ -1,0 +1,47 @@
+$pagiulli: '.pagination ul li';
+$pagicur: '.pagination .current';
+
+.pagination {
+  margin: 2rem 0;
+  text-align: center;
+
+  ul {
+    font-size: 0;
+  }
+}
+
+#{$pagiulli} {
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: .5rem;
+
+  &:last-child {
+    border: 0;
+  }
+
+  a, #{$pagicur} {
+    display: block;
+    padding: .5rem .8rem;
+    border: 1px solid #ccc;
+  }
+}
+
+#{$pagiulli} .prev,
+#{$pagiulli} .next {
+  border: 0;
+}
+
+#{$pagiulli} a {
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+#{$pagicur} {
+  color: #fff;
+  background-color: $blue;
+}
+

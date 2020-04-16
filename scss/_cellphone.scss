@@ -1,0 +1,76 @@
+@media(max-width: 600px) {
+    .site-title a {
+        font-size: 2rem;
+
+        img {
+            height: 32px;
+        }
+    }
+
+    .navbutton {
+        right: .8rem;
+    }
+
+    .header-nav-wrap {
+        top: 62px;
+    }
+
+    .header-nav li a {
+        padding: .8rem;
+
+        &:after {
+            right: .8rem;
+        }
+    }
+
+    .article-list {
+        padding: .5rem;
+
+        .img-wrap img {
+            width: 132px;
+            height: 88px;
+        }
+
+        .img-wrap .cat-data {
+            font-size: .6rem;
+        }
+
+        .text {
+            margin-left: 140px;
+            padding: 0;
+
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 0px;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+
+    .article-list .text .article-date, .article-list .text .article-author {
+        font-size: .625rem;
+        margin-bottom: 0;
+    }
+
+    .article-list .text .article-date {
+        margin-right: 2rem;
+    }
+
+    #{$ac} h1 {
+        @include article;
+    }
+
+    #{$ac} h2 {
+        @include article(1.4rem);
+    }
+
+    #{$ac} h3 {
+        @include article(1.3rem);
+    }
+    #{$ac} h4 {
+        @include article(1.2rem);
+    }
+}

@@ -1,0 +1,25 @@
+$at: "archive-top";
+
+@mixin archive($font-size: 1.6rem, $margin-bottom: 1.5rem) {
+  font-size: $font-size;
+  margin-bottom: $margin-bottom;
+}
+
+#{$at} h1 {
+  @include archive;
+}
+
+#{$at} p {
+  @include archive(.875,);
+  line-height: 1.7;
+}
+
+@media(max-width: 600px) {
+  #{$at} h1 {
+    @include archive(1.25rem, 1rem);
+  }
+
+  #{$at} p {
+    @include archive(.8125rem, 1rem);
+  }
+}

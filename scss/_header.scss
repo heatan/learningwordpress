@@ -1,0 +1,35 @@
+.header-inner {
+    position: relative;
+}
+
+.navbutton {
+    display: none;
+}
+
+.header-nav-wrap {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-left: 230px;
+    transform: translateY(-50%);
+}
+
+.header-nav {
+    font-size: 0;
+    li {
+        font-size: 1rem;
+        display: inline-block;
+        margin-right: 1rem;
+
+        a {
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            color: #000;
+            
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+}

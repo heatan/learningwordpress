@@ -1,0 +1,22 @@
+archive-top h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+archive-top p {
+  font-size: 0.875;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  archive-top h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  archive-top p {
+    font-size: 0.8125rem;
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=archive.css.map */

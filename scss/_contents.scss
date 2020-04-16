@@ -1,0 +1,73 @@
+.article-list {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+
+  .img-wrap {
+    position: relative;
+    float: left;
+    line-height: 1;
+
+    img {
+      width: 240px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .cat-data {
+      font-size: .75rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .3rem .5rem;
+      color: #fff;
+      background-color: $blue;
+    }
+  }
+
+  .text {
+    margin-left: 260px;
+
+    h2 {
+      font-size: 1.15em;
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.article-list .text .article-date, .article-list .text .article-author {
+  font-size: .75rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: #888;
+}
+
+.article-list .text .article-date {
+  margin-right: .5rem;
+}
+
+.article-list .text .article-author i {
+  margin-right: .3rem;
+}
+
+.article-list .text p {
+  font-size: .8125rem;
+  line-height: 1.7;
+}

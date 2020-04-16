@@ -1,0 +1,206 @@
+.widget_recent_entries, 
+.widget_meta,
+.widget_recent_comments,
+.widget_page,
+.widget_category,
+.widget_archieve,
+.widget_nav_menu{
+    ul {
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: .5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+.calender_wrap, .tagcloud {
+    list-style: none;
+}
+
+.sidebar-wrapper a:hover {
+    opacity: .6;
+}
+
+.widget_categories li {
+    display: block;
+    margin-bottom: .5rem;
+
+    a {
+        font-size: .95rem;
+        position: relative;
+        display: block;
+        padding: .9rem .6rem .9rem 2rem;
+        color: #fff;
+        background-color: $blue;
+
+        &::before {
+            @include widgetcl;
+            left: .6rem;
+            content: '\f02b';
+            transform: translateY(-50%);
+            color: #fff;   
+        }
+    }
+    .children {
+        margin-bottom: .5rem;
+        padding: 0;
+        padding-left: 1rem;
+        background-color: #425671;
+
+        li {
+            margin-bottom: 0;
+
+            a {
+                font-size: .9rem;
+                background-color: transparent;
+
+                &::before {
+                    @include widgetcc;
+                    content: '∟';
+                    top: 50%;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.widget_categories .screen-reader-text {
+    display: none;
+}
+
+.wiget_archieve .screen-reader-text {
+    position: relative;
+    display: block;
+    height: 0;
+    text-indent: -999999px;
+}
+
+.wiget_categories form {
+    position: relative;
+
+    &::after {
+        @include widgetcc;
+        content: '▼';
+        right: 1rem;
+        pointer-events: none;
+    }
+}
+
+.widget_categories .postform,
+.widget_archive select {
+    font-size: .95rem;
+    width: 100%;
+    padding: 4px 10px;
+    cursor: pointer;
+    border: 1px solid #e0e3ef;
+    border-radius: 0;
+    background-color: #f4f5f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.widget_archive label::after {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    // content: '▼';
+    text-indent: 0;
+    pointer-events: none;
+}
+
+// タグ
+.tagcloud  a {
+    font-size: .9rem !important;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: .5rem;
+    padding: .2rem .5rem;
+    text-decoration: none;
+    color: #03162f;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+// メニュー
+.widget_nav_menu li a {
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    padding-left: 1.3rem;
+    color: #333;
+
+    &::before {
+        @include widgetcl;
+        left: 0;
+        content: '\f105';
+        transform: translateY(-50%);
+        color: $blue;
+    }
+}
+
+// 投稿
+.widget_recent_entries li {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #ddd;
+
+    a {
+        display: block;
+        margin-bottom: .3rem;
+        padding-left: 1.6rem;
+
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: bold;
+            font-weight: 900;
+            position: absolute;
+            left:5px;
+            content: '\f303';
+            color: #000;
+        }
+    }
+}
+
+.widget_recentries .post-data {
+    font-size: .8rem;
+    display: block;
+}
+
+// カレンダー
+.calender_wrap {
+    padding: 1rem;
+    border: 1px solid #ddd;
+
+    table{
+        width: 100%;
+    }
+
+    tbody {
+        text-align: center;
+    }
+
+    caption {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    td {
+        padding: .3rem 0;
+    }
+
+    tfoot td {
+        padding-top: .7rem;
+    }
+
+    tfoot td:last-child {
+        text-align: right;
+    }
+}

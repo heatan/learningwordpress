@@ -1,0 +1,33 @@
+@mixin widgetcl(){
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%; 
+}
+
+@mixin widgetcc() {
+  position: ablolute;
+  left: .6rem;
+  transform: translatelyY(-50%);
+}
+
+$blue: #03126f;
+
+@mixin article($font-size: 1.6rem){
+  font-size: $font-size;
+}
+
+$ac: '.article-content';
+$acai: '.article-content .article-info';
+
+@mixin box($font-size: .8rem, $margin-right: .5rem, $color: #fff){
+  font-size: $font-size;
+  margin-right: $margin-right;
+  color: $color
+}
+
+@mixin box1($font-size: 1.9rem, $margin: 0 0 2rem, $letter-spacing: 1px){
+  font-size: $font-size;
+  margin: $margin;
+  letter-spacing: $letter-spacing;
+}

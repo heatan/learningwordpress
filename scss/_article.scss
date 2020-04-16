@@ -1,0 +1,133 @@
+
+#{$ac} {
+  margin-bottom: 2rem;
+
+  .cat-data a {
+    @include box;
+    padding: .1rem .5rem;
+    text-decoration: none;
+    background-color: $blue;
+  }
+
+  h1 {
+    @include box1;
+  }
+
+  h2 {
+    @include box1(1.7rem, 3rem 0 2rem, 1px);
+    padding: .4rem 0;
+    border-bottom: solid 5px $blue;
+  }
+
+  h3 {
+    @include box1(1.5rem, 2.5rem 0 1.8rem, 1px);
+    padding: 0 1rem;
+    border-left: solid 7px #415671;
+    background: transparent;
+  }
+
+  h4 {
+    @include box1(1.1rem, 0 0 .3rem, 1px);
+  }
+
+  h5 {
+    @include box1(1.1rem, 0 0 .3rem, 1px);
+  }
+
+  .article-img {
+    @extend #{$ac};
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    margin-left: 2rem;
+    list-style: none;
+  }
+
+  ol {
+    margin-left: 2rem;
+    list-style: decimal;
+  }
+
+  table {
+    border-collapse: collape;
+  }
+
+  th, #{$ac} {
+    padding: .6rem;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+  }
+
+  figure {
+    max-width: 100%;
+  }
+}
+
+#{$acai} {
+  margin-bottom: .5rem;
+
+  .article-author i {
+    margin-right: .3rem;
+  }
+}
+
+#{$ac} .article-date, #{$acai} .article-author {
+  @include box($color: #888);
+  display: inline-block;
+}
+
+#{$ac} p,
+#{$ac} b,
+#{$ac} table,
+#{$ac} ul,
+#{$ac} ol {
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+#{$ac} p,
+#{$ac} img,
+#{$ac} table,
+#{$ac} ul,
+#{$ac} ol {
+  @extend #{$ac};
+}
+
+.article-tag {
+  text-align: right;
+
+  ul {
+    font-size: 0;
+    margin-bottom: 0 ;
+  }
+  ul li {
+    font-size: .9rem;
+    display: inline-block;
+    margin-right: .5rem;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      padding: .2rem .5rem;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid #000;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}
+
+
+

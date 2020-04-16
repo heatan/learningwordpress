@@ -1,0 +1,57 @@
+$ha: ".home-top .article-top";
+$hat: ".home-top .article-top .text";
+@mixin home($width: 600px, $height: 400px){
+  width: $width;
+  height: $height;
+}
+
+#{$ha} .img-wrap img{
+  @include home;
+
+  .new-post {
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5rem;
+    color: #f00;
+  }
+}
+
+#{$hat} {
+  margin-left: 630px;
+
+
+  #{$hat} h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+#{$hat} .article-date,
+#{$hat} .cat-data {
+  margin-bottom: 1rem;
+}
+
+@media(max-width: 1024px) {
+  #{$ha} .img-wrap img {
+    @include home(420px, 280px);
+  }
+
+  #{$hat} {
+    margin-left: 440px;
+  }
+
+  #{$ha} .img-wrap img {
+    @include home(100%, 60vw);
+  }
+
+  #{$hat} {
+    margin-left: 0;
+  }
+
+  #{$ha} .new-post,
+  #{$hat} h2,
+  #{$hat} .article-date,
+  #{$hat} .cat-data {
+    margin-bottom: 0;
+  }
+}
